@@ -1,0 +1,1061 @@
+body {
+  background-color: black;
+  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Inter', sans-serif;
+}
+.main-wrapper {
+  overflow-y: auto;
+  height: 100vh;
+  padding-right: 100px; /* Add padding equal to the width of the right-side box */
+}
+/* pop up menu */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: black;
+  margin: 15% auto;
+  padding: 20px;
+  width: 50%;
+  max-width: 500px;
+  border-radius: 5px;
+  position: relative;
+  border: 1px solid white; /* Add this line to apply the outline */
+}
+
+
+.modal-content-outline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 5px;
+}
+
+.modal-close {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+
+
+.modal-close:hover,
+.modal-close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.modal-menu-item {
+  margin-bottom: 10px;
+}
+
+.modal-menu-link {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+}
+
+.modal-menu-link:hover {
+  color: #aaa;
+}
+
+/* end of pop up menu */
+/*start download button*/
+.search-and-buttons {
+  display: flex;
+  justify-content: column;
+  align-items: flex-start;
+  
+}
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.btn-link {
+  text-decoration: underline;
+}
+
+.btn-custom {
+  color: #d3d3d3;
+  text-decoration: underline;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.875rem;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+.btn-custom::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: -1;
+}
+
+.btn-custom:hover::after {
+  opacity: 1;
+}
+
+.btn-custom:hover {
+  background-color: black;
+  color: #898989;
+  text-decoration: underline;
+}
+
+/*end download button*/  
+
+#resultCount {
+  color: white;
+}
+.pagination a {
+  color: #C1C1C1;
+  font-family: 'Inter', sans-serif;
+}
+
+.pagination a:hover {
+  color: #ffffff;
+}
+
+.pagination .active a {
+  background-color: #3a3a3a;
+  border-color: #3a3a3a;
+  color: #ffffff;
+}
+.pagination a:focus {
+  color: #ffffff;
+  outline: none;
+}
+.pagination a:link,
+.pagination a:visited,
+.pagination a:hover,
+.pagination a:active,
+.pagination a:focus {
+  color: #252525; /* This is the color of the other text elements on the page */
+  text-decoration: none;
+  outline: none;
+}
+.pagination .active .page-link {
+  background-color: #252525;
+  border-color: #252525;
+  color: #C1C1C1;
+}
+
+.pagination .page-link:focus,
+.pagination .page-link:hover {
+  background-color: #333333;
+  border-color: #333333;
+  color: #C1C1C1;
+}
+.pagination .page-link {
+  background-color: #ccc;
+  color: #C1C1C1;
+}
+
+
+.about-container {
+  position: absolute;
+  top: -70px;
+  left: 0;
+  margin: 1rem;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slideIn 800ms ease-in 200ms forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.about-text {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 161.41px;
+  letter-spacing: 0.09em;
+  color: #252525;
+  position: relative;
+  z-index: 1;
+}
+
+.one-stop-database {
+  font-family: 'Lustria', serif;
+  font-size: 43.47px;
+  letter-spacing: 0.17em;
+  color: white;
+  position: absolute;
+  z-index: 2;
+}
+.title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.celiac-disease {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 64.61px;
+  letter-spacing: 0.18em;
+  color: rgba(255, 255, 255, 0.54);
+  text-align: center;
+  margin-top: 1rem;
+}
+.content-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  padding: 2rem;
+  box-sizing: border-box;
+  
+}
+.genes-container {
+  opacity: 0;
+  margin: 20px;
+  margin-top: 210px;
+  margin-right: 100px;
+  animation: fadeIn 800ms ease-in 200ms forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.genes-container h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+.table-container {
+  max-height: 300px; /* Set the desired maximum height of the container */
+  overflow-y: scroll;
+}
+
+/* Add this rule to make sure the header stays fixed */
+.table-container thead {
+  position: sticky;
+  top: 0;
+  background-color: #252525; /* Make sure the header background color matches the table header color */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Inter', sans-serif !important; 
+}
+
+table th,
+table td {
+  border: 1px ;
+  padding: 8px;
+  text-align: left;
+  font-size: 14px;
+}
+table tbody tr td {
+  color:#C1C1C1 !important;
+}
+table thead tr th {
+  color: #ddd !important;
+  background-color: #252525 !important;
+  font-weight: bold;
+}
+table th {
+  background-color: #252525;
+  font-weight: bold;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #f9f9f900 !important;
+}
+
+table tbody tr {
+  background-color: #252525ac !important;
+}
+/*table end of orginal design */
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Inter', sans-serif;
+}
+
+.custom-table th,
+.custom-table td {
+  border: 1px;
+  padding: 8px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.custom-table tbody tr td {
+  color: #C1C1C1;
+}
+
+.custom-table thead tr th {
+  color: #ddd;
+  background-color: #252525;
+  font-weight: bold;
+}
+
+.custom-table tbody tr:nth-child(odd) {
+  background-color: #f9f9f900;
+}
+
+.custom-table tbody tr {
+  background-color: #252525ac;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+/* Mobile view for table*/
+@media (max-width: 767px) {
+  #tableBody thead {
+    display: none;
+  }
+
+  #tableBody tbody tr {
+    display: block;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+  }
+
+  #tableBody tbody tr td {
+    display: block;
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  #tableBody tbody tr td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    top: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  
+}
+
+.about-description {
+font-family: 'Lustria', serif;
+font-size: 18px;
+line-height: 2.5;
+letter-spacing: 0.25em;
+text-align: justify;
+max-width: 1000px; /* Reduce the max-width value */
+margin: 3rem; /* Add some margin around the text */
+margin-top: 250px;
+color: #C1C1C1;
+}
+
+/* ... (other CSS code) ... */
+
+.right-side-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100px;
+  border-left: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  padding: 1rem 0;
+}
+
+.nav-item {
+  color: white;
+  cursor: pointer;
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform-origin: left;
+  font-size: 24px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  width: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: black;
+  width: 100%;
+  text-align: right;
+  padding: 1rem;
+}
+
+.mobile-menu .nav-item {
+  padding: 0.5rem 0;
+  transform: none;
+  writing-mode: horizontal-tb;
+}
+
+@media (max-width: 1024px) {
+  .about-text {
+    font-size: 100px;
+  }
+  .one-stop-database {
+    font-size: 30px;
+  }
+  .right-side-box {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .right-side-box {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-menu.show {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text {
+    font-size: 60px;
+  }
+  .one-stop-database {
+    font-size: 20px;
+  }
+}body {
+  background-color: black;
+  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Inter', sans-serif;
+}
+.main-wrapper {
+  overflow-y: auto;
+  height: 100vh;
+  padding-right: 100px; /* Add padding equal to the width of the right-side box */
+}
+/* pop up menu */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: black;
+  margin: 15% auto;
+  padding: 20px;
+  width: 50%;
+  max-width: 500px;
+  border-radius: 5px;
+  position: relative;
+  border: 1px solid white; /* Add this line to apply the outline */
+}
+
+
+.modal-content-outline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 5px;
+}
+
+.modal-close {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+
+
+.modal-close:hover,
+.modal-close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.modal-menu-item {
+  margin-bottom: 10px;
+}
+
+.modal-menu-link {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+}
+
+.modal-menu-link:hover {
+  color: #aaa;
+}
+
+/* end of pop up menu */
+/*start download button*/
+.search-and-buttons {
+  display: flex;
+  justify-content: column;
+  align-items: flex-start;
+  
+}
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.btn-link {
+  text-decoration: underline;
+}
+
+.btn-custom {
+  color: #d3d3d3;
+  text-decoration: underline;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.875rem;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+.btn-custom::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: -1;
+}
+
+.btn-custom:hover::after {
+  opacity: 1;
+}
+
+.btn-custom:hover {
+  background-color: black;
+  color: #898989;
+  text-decoration: underline;
+}
+
+/*end download button*/  
+
+#resultCount {
+  color: white;
+}
+.pagination a {
+  color: #C1C1C1;
+  font-family: 'Inter', sans-serif;
+}
+
+.pagination a:hover {
+  color: #ffffff;
+}
+
+.pagination .active a {
+  background-color: #3a3a3a;
+  border-color: #3a3a3a;
+  color: #ffffff;
+}
+.pagination a:focus {
+  color: #ffffff;
+  outline: none;
+}
+.pagination a:link,
+.pagination a:visited,
+.pagination a:hover,
+.pagination a:active,
+.pagination a:focus {
+  color: #252525; /* This is the color of the other text elements on the page */
+  text-decoration: none;
+  outline: none;
+}
+.pagination .active .page-link {
+  background-color: #252525;
+  border-color: #252525;
+  color: #C1C1C1;
+}
+
+.pagination .page-link:focus,
+.pagination .page-link:hover {
+  background-color: #333333;
+  border-color: #333333;
+  color: #C1C1C1;
+}
+.pagination .page-link {
+  background-color: #ccc;
+  color: #C1C1C1;
+}
+
+
+.about-container {
+  position: absolute;
+  top: -70px;
+  left: 0;
+  margin: 1rem;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slideIn 800ms ease-in 200ms forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.about-text {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 161.41px;
+  letter-spacing: 0.09em;
+  color: #252525;
+  position: relative;
+  z-index: 1;
+}
+
+.one-stop-database {
+  font-family: 'Lustria', serif;
+  font-size: 43.47px;
+  letter-spacing: 0.17em;
+  color: white;
+  position: absolute;
+  z-index: 2;
+}
+.title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.celiac-disease {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 64.61px;
+  letter-spacing: 0.18em;
+  color: rgba(255, 255, 255, 0.54);
+  text-align: center;
+  margin-top: 1rem;
+}
+.content-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  padding: 2rem;
+  box-sizing: border-box;
+  
+}
+.genes-container {
+  opacity: 0;
+  margin: 20px;
+  margin-top: 210px;
+  margin-right: 100px;
+  animation: fadeIn 800ms ease-in 200ms forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.genes-container h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+.table-container {
+  max-height: 300px; /* Set the desired maximum height of the container */
+  overflow-y: scroll;
+}
+
+/* Add this rule to make sure the header stays fixed */
+.table-container thead {
+  position: sticky;
+  top: 0;
+  background-color: #252525; /* Make sure the header background color matches the table header color */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Inter', sans-serif !important; 
+}
+
+table th,
+table td {
+  border: 1px ;
+  padding: 8px;
+  text-align: left;
+  font-size: 14px;
+}
+table tbody tr td {
+  color:#C1C1C1 !important;
+}
+table thead tr th {
+  color: #ddd !important;
+  background-color: #252525 !important;
+  font-weight: bold;
+}
+table th {
+  background-color: #252525;
+  font-weight: bold;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #f9f9f900 !important;
+}
+
+table tbody tr {
+  background-color: #252525ac !important;
+}
+/*table end of orginal design */
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Inter', sans-serif;
+}
+
+.custom-table th,
+.custom-table td {
+  border: 1px;
+  padding: 8px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.custom-table tbody tr td {
+  color: #C1C1C1;
+}
+
+.custom-table thead tr th {
+  color: #ddd;
+  background-color: #252525;
+  font-weight: bold;
+}
+
+.custom-table tbody tr:nth-child(odd) {
+  background-color: #f9f9f900;
+}
+
+.custom-table tbody tr {
+  background-color: #252525ac;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+/* Mobile view for table*/
+@media (max-width: 767px) {
+  #tableBody thead {
+    display: none;
+  }
+
+  #tableBody tbody tr {
+    display: block;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+  }
+
+  #tableBody tbody tr td {
+    display: block;
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  #tableBody tbody tr td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    top: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  
+}
+
+.about-description {
+font-family: 'Lustria', serif;
+font-size: 18px;
+line-height: 2.5;
+letter-spacing: 0.25em;
+text-align: justify;
+max-width: 1000px; /* Reduce the max-width value */
+margin: 3rem; /* Add some margin around the text */
+margin-top: 250px;
+color: #C1C1C1;
+}
+
+/* ... (other CSS code) ... */
+
+.right-side-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100px;
+  border-left: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  padding: 1rem 0;
+}
+
+.nav-item {
+  color: white;
+  cursor: pointer;
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform-origin: left;
+  font-size: 24px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  width: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: black;
+  width: 100%;
+  text-align: right;
+  padding: 1rem;
+}
+
+.mobile-menu .nav-item {
+  padding: 0.5rem 0;
+  transform: none;
+  writing-mode: horizontal-tb;
+}
+
+@media (max-width: 1024px) {
+  .about-text {
+    font-size: 100px;
+  }
+  .one-stop-database {
+    font-size: 30px;
+  }
+  .right-side-box {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .right-side-box {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-menu.show {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text {
+    font-size: 60px;
+  }
+  .one-stop-database {
+    font-size: 20px;
+  }
+}

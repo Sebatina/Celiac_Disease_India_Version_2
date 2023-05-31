@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index Page</title>
+  <link rel="stylesheet" href="static/CSS/trial.css">
+  <link href="https://fonts.googleapis.com/css?family=Inter:regular|Roboto:light|Segoe+UI|Archivo+Black|Lustria&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="about-container">
+        <h1 class="about-text">ABOUT</h1>
+        <h2 class="one-stop-database">One-Stop Database</h2>
+      </div>
+
+  <div class="right-side-box">
+    <div class="nav-item">Home</div>
+    <div class="nav-item">About</div>
+    <div class="nav-item">Celiac Disease</div>
+    <div class="nav-item">Database</div>
+  </div>
+
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="mobile-menu">
+    <div class="nav-item">Home</div>
+    <div class="nav-item">About</div>
+    <div class="nav-item">Celiac Disease</div>
+    <div class="nav-item">Database</div>
+  </div>
+
+  <script>
+    document.querySelector(".hamburger").addEventListener("click", function () {
+      document.querySelector(".mobile-menu").classList.toggle("show");
+    });
+  </script>
+</body>
+</html>

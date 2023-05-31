@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Page</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter:regular|Roboto:light|Segoe+UI|Archivo+Black|Lustria&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: black;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      position: relative;
+    }
+
+    .about-container {
+      position: absolute;
+      top: -70px;
+      left: 0;
+      margin: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about-text {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 161.41px;
+      letter-spacing: 0.09em;
+      color: #252525;
+      position: relative;
+      z-index: 1;
+    }
+
+    .one-stop-database {
+      font-family: 'Lustria', serif;
+      font-size: 43.47px;
+      letter-spacing: 0.17em;
+      color: white;
+      position: absolute;
+      z-index: 2;
+    }
+
+    .right-side-box {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 100px;
+      border-left: 1px solid white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-end;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 35px;
+      padding: 1rem 0;
+    }
+
+    .nav-item {
+      color: white;
+      cursor: pointer;
+      transform: rotate(180deg);
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      transform-origin: left;
+    }
+
+    @media (max-width: 768px) {
+      .right-side-box {
+        position: static;
+        height: auto;
+        width: 100%;
+        border-top: 1px solid white;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1rem;
+      }
+
+      .nav-item {
+        transform: none;
+        writing-mode: horizontal-tb;
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="about-container">
+    <h1 class="about-text">ABOUT</h1>
+    <h2 class="one-stop-database">One-Stop Database</h2>
+  </div>
+  <div class="right-side-box">
+    <div class="nav-item">Home</div>
+    <div class="nav-item">About</div>
+    <div class="nav-item">Celiac Disease</div>
+    <div class="nav-item">Database</div>
+  </div>
+</body>
+</html>
+
