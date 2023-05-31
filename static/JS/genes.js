@@ -16,8 +16,8 @@ async function filterTable() {
   const data = await response.json();
   const rows = data.rows;
   const totalRecords = data.total;
-  const totalPages = Math.ceil(totalRecords / 10);
-  const startingRowNumber = (currentPage - 1) * 10 + 1;
+  const totalPages = Math.ceil(totalRecords / 50);
+  const startingRowNumber = (currentPage - 1) * 50 + 1;
 
   if (rows.error) {
     console.log(rows.error);

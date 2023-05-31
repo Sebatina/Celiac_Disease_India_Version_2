@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
 $search = isset($_GET['search']) ? $_GET['search'] : '';
 
-$limit = 10;
+$limit = 50;
 $offset = ($page - 1) * $limit;
 
 if ($search != "") {
