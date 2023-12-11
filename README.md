@@ -9,7 +9,8 @@ Welcome to Celiac Disease India Version 2! This repository serves as a comprehen
 4. [How to Use](#how-to-use)
 5. [Project Structure](#project-structure)
 6. [Workflow](#workflow)
-
+7. [Research Extension with Machine Learning](#Research-Extension-with-Machine-Learning)
+   
 ## Introduction
 
 Celiac Disease India Version 2 is a repository designed to centralize and provide easy access to diverse celiac disease-related data specific to India. Whether you are a researcher exploring genetic data or a medical professional interested in clinical trial information, this repository aims to be a one-stop destination for your celiac disease research needs.
@@ -59,5 +60,13 @@ By using the website, you'll have a more interactive and efficient way to access
 ## Workflow
 
    ![data_workflow](https://github.com/Sebatina/Celiac_Disease_India_Version_2/assets/125638812/8e598fd3-9e9b-4f29-baab-6bcafef61c35)
+   
 
-Feel free to explore, use, and contribute to Celiac Disease India Version 2. Thank you for your interest in advancing celiac disease research in the Indian context!
+**Research Extension with Machine Learning:**
+
+For advanced insights through machine learning techniques, visit the [Celiac_Disease_Machine_Learning repository](https://github.com/Sebatina/Celiac_Disease_Machine_Learning.git). This repository focuses on predictive modeling using Long Short-Term Memory (LSTM) networks and Support Vector Machines (SVM) to enhance our understanding of celiac disease.
+
+Feel empowered to contribute and collaborate between the two repositories, bridging biological and machine learning insights.
+
+[Explore Celiac_Disease_Machine_Learning](https://github.com/Sebatina/Celiac_Disease_Machine_Learning.git)
+
